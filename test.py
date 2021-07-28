@@ -151,7 +151,10 @@ def my_form_post():
                 if not ispass:
                     return error_page.format(f"{cmd} 执行失败","请排查输入情况")
         # #@#@DAY@#@#|-|name|-|date
-        cmd = f'#@#@DAY@#@#|-|{name}|-|{date}'
+        if name == "陈慧英":
+            cmd = f'#@#@DAY@#@#|-|{name}|-|{date}|-|1'
+        else:
+            cmd = f'#@#@DAY@#@#|-|{name}|-|{date}|-|0'
         #ispass = send_day_report(cmd,date)
         t = threading.Thread(target=send_day_report_mail, args=(cmd,date)) #子线程发送邮件
         t.start()
