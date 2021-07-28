@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>项目总结</title>
+		<style>
+		.longtext50{
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			width: 50px;
+		}
+		
+		.longtext150{
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			width: 150px;
+		}
+		
+		.longtext{
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+		
+		</style>
+	</head>
+	<body align="center">
+		<div style="width: 56%;margin: 0 auto;">
+			
+			<header align="center" >
+				<div align="left" >
+					<a href="./">
+						<img src="https://www.meigsmart.com/userfiles/images/2020/03/23/2020032311354713.png" style="width: 200px;" alt="上海·美格" />
+					</a>
+				</div>
+				<div align="center">
+					<h1>项目总结</h1>
+					<p><time pubdate datetime="2021-07-19"></time></p>
+				</div>
+			</header>
+			
+			
+			<fieldset>
+				<legend>查询结果 - {} - 项目总结</legend>
+					<form>
+						<input type="text" style="display: none;" value="{date}" name="date"/>
+						<script type="text/javascript">
+						
+							var data = "1, '郭子祥', '其它', '2021-06-19', ' 某版本基本功能测试', 1.0, ' 广域网、wifi测试中', ' 暂无', 8";
+							var x;
+							var y;
+							var z;
+							var list_data;
+							list_data = data.split("|-|");
+							document.write('<div style="display: flex;justify-content: center;">')
+							document.write('<table border="1">')
+							document.write('<tr>')
+							document.write('<th class="longtext50">id</th>')
+							document.write('<th class="longtext50">姓名</th>')
+							document.write('<th class="longtext150">项目</th>')
+							document.write('<th class="longtext150">日期</th>')
+							document.write('<th class="longtext150">任务</th>')
+							document.write('<th class="longtext50">进度%</th>')
+							document.write('<th class="longtext150">简介</th>')
+							document.write('<th class="longtext150">备注</th>')
+							document.write('<th class="longtext50">工时</th>')
+							document.write('</tr>')
+							for(y in list_data){
+								x = list_data[y].split(",");
+								document.write('<tr>')
+								for(z in x){
+									document.write("<td class='longtext'>"+x[z]+"</td>")
+								}
+								document.write('</tr>')
+							}
+							document.write("</table>")
+							document.write("</div>")
+						</script>
+					</form>
+			</fieldset>
+			
+			
+			<footer align="center" >
+			    <p>美格 · 测试</p>
+				<p><dfn><abbr title="发布时间：2021-07-20">版本：v2.00</abbr><a href="./update.html">更新日志</a></dfn></p>
+			    <p><time 发布日期时间="2021-07-20"></time></p>
+			</footer>
+			
+		</div>
+	</body>
+</html>
